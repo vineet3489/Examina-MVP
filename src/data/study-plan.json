@@ -1,0 +1,352 @@
+{
+  "title": "30-Day SSC CGL Cracker Plan",
+  "description": "A structured 30-day study plan covering all four sections of SSC CGL: Quantitative Aptitude, General Intelligence & Reasoning, English Language, and General Awareness. Based on Rahul Sir's proven methodology.",
+  "total_days": 30,
+  "subjects": ["maths", "reasoning", "english", "gk"],
+  "days": [
+    {
+      "day": 1,
+      "week": 1,
+      "theme": "Foundation Building",
+      "tasks": [
+        { "subject": "maths", "topic": "Number System - Basics, Divisibility Rules, Remainders", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Ancient History - Indus Valley Civilization & Vedic Period", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Nouns - Types, Rules & Common Errors", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Coding & Decoding - Letter Shifting Patterns", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 25 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 2,
+      "week": 1,
+      "theme": "Foundation Building",
+      "tasks": [
+        { "subject": "maths", "topic": "LCM & HCF - Methods, Word Problems", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Ancient History - Maurya & Gupta Empire", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Pronouns - Types, Cases & Common Errors", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Coding & Decoding - Number & Symbol Based", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 25 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 3,
+      "week": 1,
+      "theme": "Foundation Building",
+      "tasks": [
+        { "subject": "maths", "topic": "Percentage - Basics, Successive Changes, Population Problems", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Medieval History - Delhi Sultanate", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Tenses - Present, Past, Future (All 12 Forms)", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Analogy - Word & Number Based", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 25 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 4,
+      "week": 1,
+      "theme": "Foundation Building",
+      "tasks": [
+        { "subject": "maths", "topic": "Profit & Loss - Basic Concepts, Successive Discounts, Marked Price", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Medieval History - Mughal Empire", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Subject-Verb Agreement - Rules & Practice", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Classification - Odd One Out (Word, Number, Letter)", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 25 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 5,
+      "week": 1,
+      "theme": "Foundation Building",
+      "tasks": [
+        { "subject": "maths", "topic": "Simple Interest & Compound Interest - Formulas & Shortcuts", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Indian Geography - Physical Features, Mountains, Plains", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Active & Passive Voice - Rules for All Tenses", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Number Series - Patterns & Missing Terms", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 25 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 6,
+      "week": 1,
+      "theme": "Weekly Revision",
+      "tasks": [
+        { "subject": "maths", "topic": "Revision: Number System, LCM/HCF, Percentage, P&L, SI/CI", "type": "revision", "duration": 60 },
+        { "subject": "english", "topic": "Revision: Nouns, Pronouns, Tenses, SVA, Voice", "type": "revision", "duration": 40 },
+        { "subject": "reasoning", "topic": "Revision: Coding, Analogy, Classification, Series", "type": "revision", "duration": 40 },
+        { "subject": "gk", "topic": "Revision: Ancient & Medieval History, Geography Basics", "type": "revision", "duration": 30 }
+      ]
+    },
+    {
+      "day": 7,
+      "week": 1,
+      "theme": "PYQ Practice Day",
+      "tasks": [
+        { "subject": "practice", "topic": "SSC CGL Previous Year Questions - Mixed Set 1 (50 questions)", "type": "practice", "duration": 60 },
+        { "subject": "practice", "topic": "Analysis of Mistakes & Weak Areas Identification", "type": "review", "duration": 30 },
+        { "subject": "practice", "topic": "Revision of Incorrect Answers with Concepts", "type": "revision", "duration": 30 }
+      ]
+    },
+    {
+      "day": 8,
+      "week": 2,
+      "theme": "Core Concepts",
+      "tasks": [
+        { "subject": "maths", "topic": "Ratio & Proportion - Basics, Componendo-Dividendo, Mixtures", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Modern History - Indian Freedom Struggle (1857-1919)", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Direct & Indirect Speech - Reporting Verbs, Tense Changes", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Blood Relations - Family Tree Method", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 30 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 9,
+      "week": 2,
+      "theme": "Core Concepts",
+      "tasks": [
+        { "subject": "maths", "topic": "Average & Alligation - Weighted Average, Mixture Problems", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Modern History - Freedom Struggle (1920-1947) Gandhi Era", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Prepositions - Common Errors, Fixed Prepositions", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Direction Sense Test - Shadow Problems", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 30 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 10,
+      "week": 2,
+      "theme": "Core Concepts",
+      "tasks": [
+        { "subject": "maths", "topic": "Time & Work - Efficiency Method, Pipe & Cistern", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Indian Polity - Preamble, Fundamental Rights, DPSP", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Conjunctions & Connectors - Types and Usage", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Ranking & Order - Linear Arrangement", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 30 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 11,
+      "week": 2,
+      "theme": "Core Concepts",
+      "tasks": [
+        { "subject": "maths", "topic": "Speed, Distance & Time - Trains, Boats & Streams", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Indian Polity - Parliament, President, PM, Governor", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Vocabulary Building - Synonyms & Antonyms (Set 1)", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Syllogism - Venn Diagram Method", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 30 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 12,
+      "week": 2,
+      "theme": "Core Concepts",
+      "tasks": [
+        { "subject": "maths", "topic": "Algebra - Linear Equations, Quadratic Equations, Identities", "type": "content", "duration": 45 },
+        { "subject": "gk", "topic": "Indian Economy - Basic Concepts, Planning, Banking", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Vocabulary Building - Idioms & Phrases (Set 1)", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Seating Arrangement - Circular Arrangement", "type": "content", "duration": 30 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 30 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 13,
+      "week": 2,
+      "theme": "Weekly Revision",
+      "tasks": [
+        { "subject": "maths", "topic": "Revision: Ratio, Average, Time-Work, Speed-Distance, Algebra", "type": "revision", "duration": 60 },
+        { "subject": "english", "topic": "Revision: Narration, Prepositions, Conjunctions, Vocabulary", "type": "revision", "duration": 40 },
+        { "subject": "reasoning", "topic": "Revision: Blood Relations, Direction, Ranking, Syllogism, Seating", "type": "revision", "duration": 40 },
+        { "subject": "gk", "topic": "Revision: Modern History, Polity, Economy Basics", "type": "revision", "duration": 30 }
+      ]
+    },
+    {
+      "day": 14,
+      "week": 2,
+      "theme": "PYQ Practice Day",
+      "tasks": [
+        { "subject": "practice", "topic": "SSC CGL Previous Year Questions - Mixed Set 2 (50 questions)", "type": "practice", "duration": 60 },
+        { "subject": "practice", "topic": "Sectional Test: Maths (25 questions in 30 mins)", "type": "practice", "duration": 35 },
+        { "subject": "practice", "topic": "Analysis & Revision of Weak Topics", "type": "review", "duration": 25 }
+      ]
+    },
+    {
+      "day": 15,
+      "week": 3,
+      "theme": "Advanced Topics + Practice",
+      "tasks": [
+        { "subject": "maths", "topic": "Geometry - Triangles, Circles, Quadrilaterals (Properties & Theorems)", "type": "content", "duration": 50 },
+        { "subject": "gk", "topic": "Science - Physics (Mechanics, Light, Sound, Electricity)", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Error Spotting - Noun, Pronoun, Adjective Errors", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Mirror & Water Image - Letters, Numbers, Figures", "type": "content", "duration": 25 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 35 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 16,
+      "week": 3,
+      "theme": "Advanced Topics + Practice",
+      "tasks": [
+        { "subject": "maths", "topic": "Geometry - Coordinate Geometry, Lines & Angles", "type": "content", "duration": 50 },
+        { "subject": "gk", "topic": "Science - Chemistry (Elements, Reactions, Acids & Bases)", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Error Spotting - Verb, Tense, Preposition Errors", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Venn Diagrams - Two & Three Element Problems", "type": "content", "duration": 25 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 35 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 17,
+      "week": 3,
+      "theme": "Advanced Topics + Practice",
+      "tasks": [
+        { "subject": "maths", "topic": "Trigonometry - Ratios, Identities, Height & Distance", "type": "content", "duration": 50 },
+        { "subject": "gk", "topic": "Science - Biology (Cell, Human Body, Diseases, Nutrition)", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Sentence Improvement & Sentence Rearrangement", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Pattern Recognition - Figure Series & Completion", "type": "content", "duration": 25 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 35 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 18,
+      "week": 3,
+      "theme": "Advanced Topics + Practice",
+      "tasks": [
+        { "subject": "maths", "topic": "Mensuration - 2D & 3D Figures, Surface Area, Volume", "type": "content", "duration": 50 },
+        { "subject": "gk", "topic": "Indian Economy - Taxation, Budget, GDP, Inflation", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Fill in the Blanks - Single & Double Fillers", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Alphabet Test & Dictionary Order", "type": "content", "duration": 25 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 35 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 19,
+      "week": 3,
+      "theme": "Advanced Topics + Practice",
+      "tasks": [
+        { "subject": "maths", "topic": "Data Interpretation - Bar Graph, Pie Chart, Tables", "type": "content", "duration": 50 },
+        { "subject": "gk", "topic": "Geography - Climate, Soil, Agriculture, Natural Resources", "type": "content", "duration": 30 },
+        { "subject": "english", "topic": "Reading Comprehension - Strategies & Practice", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Missing Number - Matrix & Figure Based", "type": "content", "duration": 25 },
+        { "subject": "practice", "topic": "Daily Practice Questions - 35 Mixed Questions", "type": "practice", "duration": 30 }
+      ]
+    },
+    {
+      "day": 20,
+      "week": 3,
+      "theme": "Weekly Revision",
+      "tasks": [
+        { "subject": "maths", "topic": "Revision: Geometry, Trigonometry, Mensuration, DI", "type": "revision", "duration": 60 },
+        { "subject": "english", "topic": "Revision: Error Spotting, Sentence Improvement, Fill Blanks, RC", "type": "revision", "duration": 40 },
+        { "subject": "reasoning", "topic": "Revision: Mirror Image, Venn Diagram, Pattern, Alphabet, Missing No.", "type": "revision", "duration": 40 },
+        { "subject": "gk", "topic": "Revision: Science (Physics, Chemistry, Biology), Economy, Geography", "type": "revision", "duration": 30 }
+      ]
+    },
+    {
+      "day": 21,
+      "week": 3,
+      "theme": "PYQ Practice Day",
+      "tasks": [
+        { "subject": "practice", "topic": "SSC CGL Previous Year Questions - Mixed Set 3 (50 questions)", "type": "practice", "duration": 60 },
+        { "subject": "practice", "topic": "Sectional Test: English + Reasoning (50 questions in 45 mins)", "type": "practice", "duration": 50 },
+        { "subject": "practice", "topic": "Detailed Error Analysis & Strategy Adjustment", "type": "review", "duration": 20 }
+      ]
+    },
+    {
+      "day": 22,
+      "week": 4,
+      "theme": "Revision + Mock Tests",
+      "tasks": [
+        { "subject": "maths", "topic": "Quick Revision: Number System, Percentage, P&L, SI/CI, Ratio", "type": "revision", "duration": 40 },
+        { "subject": "english", "topic": "Quick Revision: Grammar Rules Compilation", "type": "revision", "duration": 30 },
+        { "subject": "gk", "topic": "Static GK: Important Dates, Awards, Sports, Books & Authors", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Quick Revision: All Reasoning Topics Formula Sheet", "type": "revision", "duration": 30 },
+        { "subject": "practice", "topic": "Mini Mock Test 1 (50 questions, 30 mins)", "type": "practice", "duration": 35 }
+      ]
+    },
+    {
+      "day": 23,
+      "week": 4,
+      "theme": "Revision + Mock Tests",
+      "tasks": [
+        { "subject": "maths", "topic": "Quick Revision: Time-Work, Speed-Distance, Algebra", "type": "revision", "duration": 40 },
+        { "subject": "english", "topic": "Quick Revision: Vocabulary - Synonyms, Antonyms, Idioms", "type": "revision", "duration": 30 },
+        { "subject": "gk", "topic": "Static GK: Constitutional Bodies, Appointments, Schemes", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Mixed Reasoning Practice - 30 Questions", "type": "practice", "duration": 30 },
+        { "subject": "practice", "topic": "Mini Mock Test 2 (50 questions, 30 mins)", "type": "practice", "duration": 35 }
+      ]
+    },
+    {
+      "day": 24,
+      "week": 4,
+      "theme": "Revision + Mock Tests",
+      "tasks": [
+        { "subject": "maths", "topic": "Quick Revision: Geometry, Trigonometry, Mensuration", "type": "revision", "duration": 40 },
+        { "subject": "english", "topic": "Quick Revision: Error Spotting & Sentence Improvement Rules", "type": "revision", "duration": 30 },
+        { "subject": "gk", "topic": "Current Affairs Compilation - Last 6 Months Highlights", "type": "content", "duration": 30 },
+        { "subject": "reasoning", "topic": "Mixed Reasoning Practice - 30 Questions (Advanced)", "type": "practice", "duration": 30 },
+        { "subject": "practice", "topic": "Mini Mock Test 3 (50 questions, 30 mins)", "type": "practice", "duration": 35 }
+      ]
+    },
+    {
+      "day": 25,
+      "week": 4,
+      "theme": "Revision + Mock Tests",
+      "tasks": [
+        { "subject": "practice", "topic": "Full Mock Test 1 - Tier 1 Pattern (100 questions, 60 mins)", "type": "practice", "duration": 65 },
+        { "subject": "practice", "topic": "Detailed Analysis of Mock Test 1 - Section-wise", "type": "review", "duration": 40 },
+        { "subject": "practice", "topic": "Revision of Weak Areas from Mock Test 1", "type": "revision", "duration": 30 }
+      ]
+    },
+    {
+      "day": 26,
+      "week": 4,
+      "theme": "Revision + Mock Tests",
+      "tasks": [
+        { "subject": "maths", "topic": "Weak Area Focus: Top 10 Most Difficult Topics Revision", "type": "revision", "duration": 45 },
+        { "subject": "english", "topic": "Weak Area Focus: Common Mistakes Compilation", "type": "revision", "duration": 30 },
+        { "subject": "gk", "topic": "Rapid Fire: 200 Most Important GK Facts", "type": "revision", "duration": 30 },
+        { "subject": "reasoning", "topic": "Weak Area Focus: Tricky Questions Practice", "type": "practice", "duration": 30 },
+        { "subject": "practice", "topic": "Timed Practice: 25 Questions in 15 mins (Speed Building)", "type": "practice", "duration": 20 }
+      ]
+    },
+    {
+      "day": 27,
+      "week": 4,
+      "theme": "Weekly Revision",
+      "tasks": [
+        { "subject": "maths", "topic": "Final Formula Sheet Revision - All Topics", "type": "revision", "duration": 45 },
+        { "subject": "english", "topic": "Final Grammar Rules & Vocabulary Revision", "type": "revision", "duration": 35 },
+        { "subject": "reasoning", "topic": "Final Tricks & Shortcuts Revision - All Topics", "type": "revision", "duration": 35 },
+        { "subject": "gk", "topic": "Final GK Revision: History, Polity, Geography, Science, Economy", "type": "revision", "duration": 40 }
+      ]
+    },
+    {
+      "day": 28,
+      "week": 4,
+      "theme": "PYQ Practice Day",
+      "tasks": [
+        { "subject": "practice", "topic": "Full Mock Test 2 - Tier 1 Pattern (100 questions, 60 mins)", "type": "practice", "duration": 65 },
+        { "subject": "practice", "topic": "Detailed Analysis of Mock Test 2 - Accuracy & Speed Check", "type": "review", "duration": 40 },
+        { "subject": "practice", "topic": "Final Weak Area Note-making", "type": "revision", "duration": 20 }
+      ]
+    },
+    {
+      "day": 29,
+      "week": 4,
+      "theme": "Final Revision",
+      "tasks": [
+        { "subject": "maths", "topic": "Last Minute Revision: Important Formulas & Shortcuts Only", "type": "revision", "duration": 30 },
+        { "subject": "english", "topic": "Last Minute Revision: Top 50 Rules & 100 Vocabulary Words", "type": "revision", "duration": 25 },
+        { "subject": "reasoning", "topic": "Last Minute Revision: Key Patterns & Shortcut Methods", "type": "revision", "duration": 25 },
+        { "subject": "gk", "topic": "Last Minute Revision: 100 Most Expected GK Questions", "type": "revision", "duration": 25 },
+        { "subject": "practice", "topic": "Light Practice: 20 Easy-Medium Questions (Confidence Building)", "type": "practice", "duration": 20 }
+      ]
+    },
+    {
+      "day": 30,
+      "week": 4,
+      "theme": "Final Mock & Strategy",
+      "tasks": [
+        { "subject": "practice", "topic": "Full Mock Test 3 - Final Simulation (100 questions, 60 mins)", "type": "practice", "duration": 65 },
+        { "subject": "practice", "topic": "Final Score Analysis & Exam Day Strategy Planning", "type": "review", "duration": 30 },
+        { "subject": "practice", "topic": "Exam Day Tips: Time Management, Attempt Strategy, Negative Marking Awareness", "type": "content", "duration": 15 }
+      ]
+    }
+  ]
+}
