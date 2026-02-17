@@ -29,12 +29,12 @@ interface Profile {
 }
 
 const stories = [
-  { label: 'Tips', color: 'from-violet-500 to-purple-600', emoji: '💡' },
-  { label: 'Vocab', color: 'from-blue-500 to-indigo-600', emoji: '📚' },
-  { label: 'Quiz', color: 'from-pink-500 to-rose-600', emoji: '🧠' },
-  { label: 'Facts', color: 'from-amber-500 to-orange-600', emoji: '🌍' },
-  { label: 'Math', color: 'from-emerald-500 to-teal-600', emoji: '🔢' },
-  { label: 'News', color: 'from-cyan-500 to-blue-600', emoji: '📰' },
+  { label: 'Tips', color: 'from-violet-500 to-purple-600', emoji: '💡', href: '/tutor?topic=SSC CGL preparation tips' },
+  { label: 'Vocab', color: 'from-blue-500 to-indigo-600', emoji: '📚', href: '/flashcards?subject=English' },
+  { label: 'Quiz', color: 'from-pink-500 to-rose-600', emoji: '🧠', href: '/tests' },
+  { label: 'Facts', color: 'from-amber-500 to-orange-600', emoji: '🌍', href: '/flashcards?subject=GK' },
+  { label: 'Math', color: 'from-emerald-500 to-teal-600', emoji: '🔢', href: '/flashcards?subject=Maths' },
+  { label: 'News', color: 'from-cyan-500 to-blue-600', emoji: '📰', href: '/tutor?topic=Latest current affairs for SSC CGL 2025' },
 ]
 
 const subjects = [
@@ -44,7 +44,7 @@ const subjects = [
     progress: 45,
     color: '#6C5CE7',
     bg: 'bg-violet-50',
-    href: '/dashboard/study-plan',
+    href: '/flashcards?subject=English',
   },
   {
     name: 'Maths',
@@ -52,7 +52,7 @@ const subjects = [
     progress: 32,
     color: '#4A90D9',
     bg: 'bg-blue-50',
-    href: '/dashboard/study-plan',
+    href: '/flashcards?subject=Maths',
   },
   {
     name: 'Reasoning',
@@ -60,7 +60,7 @@ const subjects = [
     progress: 28,
     color: '#E84393',
     bg: 'bg-pink-50',
-    href: '/dashboard/study-plan',
+    href: '/flashcards?subject=Reasoning',
   },
   {
     name: 'GK',
@@ -68,7 +68,7 @@ const subjects = [
     progress: 18,
     color: '#00B894',
     bg: 'bg-emerald-50',
-    href: '/dashboard/study-plan',
+    href: '/flashcards?subject=GK',
   },
 ]
 
@@ -151,20 +151,21 @@ export default function DashboardPage() {
       <motion.div variants={item} className="-mx-4">
         <div className="flex gap-4 px-4 overflow-x-auto scroll-container">
           {stories.map((story, index) => (
-            <button key={index} className="flex flex-col items-center gap-1.5 shrink-0">
+            <Link key={index} href={story.href} className="flex flex-col items-center gap-1.5 shrink-0">
               <div
                 className={`w-16 h-16 rounded-full bg-gradient-to-br ${story.color} flex items-center justify-center text-2xl ring-2 ring-white shadow-md`}
               >
                 {story.emoji}
               </div>
               <span className="text-[11px] font-medium text-gray-600">{story.label}</span>
-            </button>
+            </Link>
           ))}
         </div>
       </motion.div>
 
       {/* Streak Card */}
       <motion.div variants={item}>
+        <Link href="/profile">
         <Card variant="gradient" className="relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-10 translate-x-10" />
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-8 -translate-x-8" />
@@ -190,6 +191,7 @@ export default function DashboardPage() {
             </div>
           </div>
         </Card>
+        </Link>
       </motion.div>
 
       {/* Continue Study Plan */}

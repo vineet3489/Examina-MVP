@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { Suspense, useState, useRef, useEffect, useCallback } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Bot, User, Sparkles, X } from 'lucide-react'
 import { ChatBubble } from '@/components/tutor/chat-bubble'
@@ -51,6 +52,17 @@ function setDailyMessageCount(count: number) {
 }
 
 export default function TutorPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-3 border-[#6C5CE7] border-t-transparent rounded-full animate-spin" /></div>}>
+      <TutorContent />
+    </Suspense>
+  )
+}
+
+function TutorContent() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const initialTopic = searchParams.get('topic')
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'assistant',
@@ -69,6 +81,13 @@ export default function TutorPage() {
   useEffect(() => {
     setMessageCount(getDailyMessageCount())
   }, [])
+
+  // Pre-fill input if topic query param exists
+  useEffect(() => {
+    if (initialTopic) {
+      setInput(`Explain the topic "${initialTopic}" in detail with examples`)
+    }
+  }, [initialTopic])
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
@@ -101,12 +120,16 @@ export default function TutorPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: updatedMessages.map((m) => ({
+          messages: updatedMessages.slice(1).map((m) => ({
             role: m.role,
             content: m.content,
           })),
         }),
       })
+
+      if (!response.ok) {
+        throw new Error(`API returned ${response.status}`)
+      }
 
       const data = await response.json()
 
@@ -242,7 +265,10 @@ export default function TutorPage() {
             </p>
           </div>
           <button
-            onClick={() => setShowPaywall(false)}
+            onClick={() => {
+              setShowPaywall(false)
+              router.push('/subscribe')
+            }}
             className="w-full py-3 rounded-xl bg-[#6C5CE7] text-white font-semibold text-sm active:scale-[0.98] transition-transform"
           >
             Upgrade Now

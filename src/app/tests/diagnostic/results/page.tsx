@@ -16,7 +16,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ScoreRing } from '@/components/test/score-ring'
-import { formatTime, calculatePercentile } from '@/lib/utils'
+import { formatTime, calculatePercentile, predictSSCSuccess } from '@/lib/utils'
 
 interface SubjectScore {
   score: number
@@ -303,22 +303,28 @@ export default function DiagnosticResultsPage() {
           </motion.div>
         )}
 
-        {/* Percentile prediction */}
+        {/* Success Predictor */}
         <motion.div variants={itemVariants}>
-          <Card variant="gradient" className="p-5">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
-                <TrendingUp size={20} className="text-white" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white/90 mb-1">Score Prediction</p>
-                <p className="text-sm text-white/80 leading-relaxed">
-                  Based on your performance, your estimated SSC CGL percentile is:{' '}
-                  <span className="text-xl font-bold text-white">{percentile}%</span>
-                </p>
-              </div>
-            </div>
-          </Card>
+          {(() => {
+            const prediction = predictSSCSuccess(totalScore, totalQuestions, subjectScores)
+            return (
+              <Card className="border-2" style={{ borderColor: prediction.color + '30' }}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: prediction.color + '15' }}>
+                    <TrendingUp size={20} style={{ color: prediction.color }} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-sm">SSC CGL Success Prediction</h3>
+                    <p className="text-xs font-medium" style={{ color: prediction.color }}>{prediction.likelihood} Chance &middot; ~{percentile}th percentile</p>
+                  </div>
+                </div>
+                <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden mb-2">
+                  <div className="h-full rounded-full transition-all duration-1000" style={{ width: `${prediction.percentage}%`, backgroundColor: prediction.color }} />
+                </div>
+                <p className="text-xs text-gray-500">{prediction.message}</p>
+              </Card>
+            )
+          })()}
         </motion.div>
 
         {/* Generate Study Plan CTA */}

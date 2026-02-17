@@ -11,9 +11,11 @@ import {
   LogOut,
   Crown,
   ChevronRight,
+  CheckCircle2,
 } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Modal } from '@/components/ui/modal'
 import { createClient } from '@/lib/supabase/client'
 
 interface Profile {
@@ -50,6 +52,7 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(true)
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
   const [signingOut, setSigningOut] = useState(false)
+  const [showAbout, setShowAbout] = useState(false)
 
   useEffect(() => {
     async function fetchProfile() {
@@ -274,7 +277,7 @@ export default function ProfilePage() {
           </div>
 
           {/* About Examina */}
-          <button className="w-full flex items-center justify-between px-4 py-3.5 hover:bg-gray-50 transition-colors">
+          <button onClick={() => setShowAbout(true)} className="w-full flex items-center justify-between px-4 py-3.5 hover:bg-gray-50 transition-colors">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-lg bg-emerald-50 flex items-center justify-center">
                 <Info size={18} className="text-emerald-600" />
@@ -306,6 +309,48 @@ export default function ProfilePage() {
       <motion.div variants={item} className="text-center">
         <p className="text-xs text-gray-400">Examina v1.0.0</p>
       </motion.div>
+
+      {/* About Modal */}
+      <Modal isOpen={showAbout} onClose={() => setShowAbout(false)}>
+        <div className="text-center">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6C5CE7] to-purple-600 flex items-center justify-center mx-auto mb-4">
+            <span className="text-white font-bold text-2xl">E</span>
+          </div>
+          <h2 className="text-lg font-bold text-gray-900 mb-1">Examina</h2>
+          <p className="text-sm text-gray-500 mb-4">Version 1.0.0</p>
+          <div className="text-left space-y-3 mb-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Examina is your AI-powered SSC CGL exam preparation companion.
+              Practice with mock tests, learn with flashcards, and get
+              personalized help from our AI tutor.
+            </p>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-green-500 shrink-0" />
+                <span>Full-length mock tests with detailed analysis</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-green-500 shrink-0" />
+                <span>AI tutor available in Hindi and English</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-green-500 shrink-0" />
+                <span>Smart flashcards with spaced repetition</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-green-500 shrink-0" />
+                <span>Personalized study plans</span>
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={() => setShowAbout(false)}
+            className="w-full py-3 rounded-xl bg-gray-100 text-gray-700 font-semibold text-sm"
+          >
+            Close
+          </button>
+        </div>
+      </Modal>
     </motion.div>
   )
 }

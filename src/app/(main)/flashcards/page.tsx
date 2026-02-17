@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { Suspense, useEffect, useState, useCallback } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BookOpen, Brain, RotateCcw, Check } from 'lucide-react'
 import { Card } from '@/components/ui/card'
@@ -64,7 +65,19 @@ function saveMasteryToStorage(mastery: MasteryMap) {
 }
 
 export default function FlashcardsPage() {
-  const [selectedSubject, setSelectedSubject] = useState<string>('All')
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-8 h-8 border-3 border-[#6C5CE7] border-t-transparent rounded-full animate-spin" /></div>}>
+      <FlashcardsContent />
+    </Suspense>
+  )
+}
+
+function FlashcardsContent() {
+  const searchParams = useSearchParams()
+  const initialSubject = searchParams.get('subject')
+  const [selectedSubject, setSelectedSubject] = useState<string>(
+    initialSubject ? initialSubject.charAt(0).toUpperCase() + initialSubject.slice(1) : 'All'
+  )
   const [flashcards] = useState<Flashcard[]>(flashcardsData as Flashcard[])
   const [flippedCardId, setFlippedCardId] = useState<string | null>(null)
   const [mastery, setMastery] = useState<MasteryMap>({})
@@ -181,7 +194,6 @@ export default function FlashcardsPage() {
                     className="w-full"
                     style={{
                       backfaceVisibility: 'hidden',
-                      display: isFlipped ? 'none' : 'block',
                     }}
                   >
                     <Card className="min-h-[180px] flex flex-col justify-between">
@@ -221,11 +233,10 @@ export default function FlashcardsPage() {
 
                   {/* Back Face */}
                   <div
-                    className="w-full"
+                    className="w-full absolute top-0 left-0"
                     style={{
                       backfaceVisibility: 'hidden',
                       transform: 'rotateY(180deg)',
-                      display: isFlipped ? 'block' : 'none',
                     }}
                   >
                     <Card className="min-h-[180px] flex flex-col justify-between bg-gradient-to-br from-[#6C5CE7]/5 to-purple-50 border-[#6C5CE7]/20">

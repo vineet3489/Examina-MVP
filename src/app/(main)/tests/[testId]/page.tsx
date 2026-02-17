@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Clock, ChevronLeft, ChevronRight, Bookmark, AlertTriangle } from 'lucide-react'
+import { Clock, ChevronLeft, ChevronRight, Bookmark, AlertTriangle, XCircle, BookOpen, MessageCircle } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Modal } from '@/components/ui/modal'
@@ -75,7 +75,10 @@ export default function TestPage() {
   const [timeRemaining, setTimeRemaining] = useState(config ? config.timeMinutes * 60 : 0)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [showConfirmModal, setShowConfirmModal] = useState(false)
+  const [showFeedback, setShowFeedback] = useState(false)
   const [startTime] = useState(Date.now())
+
+  const isPractice = !!config?.subject
 
   // Timer countdown
   useEffect(() => {
@@ -156,6 +159,11 @@ export default function TestPage() {
       next.set(currentIndex, optionIndex)
       return next
     })
+
+    // In practice mode, show feedback if wrong
+    if (isPractice && optionIndex !== questions[currentIndex].correct_answer) {
+      setTimeout(() => setShowFeedback(true), 300)
+    }
   }
 
   const toggleMarkForReview = () => {
@@ -171,6 +179,11 @@ export default function TestPage() {
   }
 
   const goNext = () => {
+    // In practice mode, block if current answer is wrong
+    if (isPractice && answers.has(currentIndex) && answers.get(currentIndex) !== questions[currentIndex].correct_answer) {
+      setShowFeedback(true)
+      return
+    }
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(currentIndex + 1)
     }
@@ -355,6 +368,54 @@ export default function TestPage() {
           )}
         </div>
       </div>
+
+      {/* Wrong Answer Feedback Modal (Practice Mode) */}
+      <Modal isOpen={showFeedback} onClose={() => {}}>
+        <div>
+          <div className="flex items-center gap-2 mb-3">
+            <XCircle size={24} className="text-red-500" />
+            <h3 className="font-bold text-gray-900">Not quite right!</h3>
+          </div>
+          <div className="bg-green-50 rounded-xl p-3 mb-3">
+            <p className="text-xs text-green-700 font-medium mb-1">Correct Answer:</p>
+            <p className="text-sm text-green-800 font-semibold">
+              {String.fromCharCode(65 + currentQuestion.correct_answer)}. {currentQuestion.options[currentQuestion.correct_answer]}
+            </p>
+          </div>
+          <p className="text-sm text-gray-600 mb-4 leading-relaxed">{currentQuestion.explanation}</p>
+          <p className="text-xs text-gray-500 font-semibold mb-2 uppercase tracking-wide">Study this topic:</p>
+          <div className="flex gap-2 mb-4">
+            <button
+              onClick={() => router.push(`/flashcards?subject=${currentQuestion.subject}&topic=${encodeURIComponent(currentQuestion.topic)}`)}
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-50 text-purple-700 text-xs font-semibold"
+            >
+              <BookOpen size={14} />
+              Review Flashcards
+            </button>
+            <button
+              onClick={() => router.push(`/tutor?topic=${encodeURIComponent(currentQuestion.topic)}`)}
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-blue-50 text-blue-700 text-xs font-semibold"
+            >
+              <MessageCircle size={14} />
+              Ask AI Tutor
+            </button>
+          </div>
+          <Button
+            variant="primary"
+            className="w-full"
+            onClick={() => {
+              setAnswers((prev) => {
+                const next = new Map(prev)
+                next.delete(currentIndex)
+                return next
+              })
+              setShowFeedback(false)
+            }}
+          >
+            Try Again
+          </Button>
+        </div>
+      </Modal>
 
       {/* Confirmation Modal */}
       <Modal isOpen={showConfirmModal} onClose={() => setShowConfirmModal(false)}>

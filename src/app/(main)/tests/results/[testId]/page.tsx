@@ -11,13 +11,16 @@ import {
   RotateCcw,
   ArrowLeft,
   TrendingUp,
+  Target,
+  BookOpen,
+  MessageCircle,
 } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ProgressBar } from '@/components/ui/progress-bar'
 import { ScoreRing } from '@/components/test/score-ring'
-import { formatTime, calculatePercentile } from '@/lib/utils'
+import { formatTime, calculatePercentile, predictSSCSuccess } from '@/lib/utils'
 
 interface SectionScore {
   score: number
@@ -151,6 +154,30 @@ export default function TestResultsPage() {
             </div>
           </div>
         </Card>
+      </motion.div>
+
+      {/* Success Predictor */}
+      <motion.div variants={item}>
+        {(() => {
+          const prediction = predictSSCSuccess(result.score, result.total, result.sectionScores)
+          return (
+            <Card className="border-2" style={{ borderColor: prediction.color + '30' }}>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: prediction.color + '15' }}>
+                  <Target size={20} style={{ color: prediction.color }} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 text-sm">SSC CGL Success Prediction</h3>
+                  <p className="text-xs font-medium" style={{ color: prediction.color }}>{prediction.likelihood} Chance</p>
+                </div>
+              </div>
+              <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden mb-2">
+                <div className="h-full rounded-full transition-all duration-1000" style={{ width: `${prediction.percentage}%`, backgroundColor: prediction.color }} />
+              </div>
+              <p className="text-xs text-gray-500">{prediction.message}</p>
+            </Card>
+          )
+        })()}
       </motion.div>
 
       {/* Section-wise Breakdown */}
@@ -287,6 +314,24 @@ export default function TestResultsPage() {
                             <p className="font-medium mb-1">Explanation:</p>
                             <p className="leading-relaxed">{question.explanation}</p>
                           </div>
+                          {!isCorrect && !isUnanswered && (
+                            <div className="flex gap-2">
+                              <button
+                                onClick={(e) => { e.stopPropagation(); router.push(`/flashcards?subject=${question.subject}&topic=${encodeURIComponent(question.topic)}`) }}
+                                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-50 text-purple-700 text-xs font-semibold"
+                              >
+                                <BookOpen size={14} />
+                                Review Flashcards
+                              </button>
+                              <button
+                                onClick={(e) => { e.stopPropagation(); router.push(`/tutor?topic=${encodeURIComponent(question.topic)}`) }}
+                                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-blue-50 text-blue-700 text-xs font-semibold"
+                              >
+                                <MessageCircle size={14} />
+                                Ask AI Tutor
+                              </button>
+                            </div>
+                          )}
                         </div>
                       </motion.div>
                     )}
